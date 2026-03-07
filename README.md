@@ -28,6 +28,10 @@
 ## Project setup
 
 ```bash
+# migration
+$ npx prisma migrate dev
+
+# installation des dépendances
 $ npm install
 ```
 
