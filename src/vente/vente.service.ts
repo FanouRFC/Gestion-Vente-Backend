@@ -11,6 +11,10 @@ export class VenteService {
         return await this.prismaService.vente.findMany({orderBy: {numProduit: 'asc'}})
     }
 
+    async getByNum(numProduit: number){
+        return await this.prismaService.vente.findFirstOrThrow({where: {numProduit}})
+    }
+
     async add(data: CreateVenteDTO){
         return await this.prismaService.vente.create({data})
     }

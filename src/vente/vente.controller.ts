@@ -10,6 +10,11 @@ export class VenteController {
     getAll(){
         return this.venteService.getAll()
     }
+    
+    @Get(":numProduit")
+    getByNum(@Param("numProduit", ParseIntPipe) numProduit){
+        return this.venteService.getByNum(numProduit)
+    }
 
     @Post("")
     add(@Body(ValidationPipe) body: CreateVenteDTO){
