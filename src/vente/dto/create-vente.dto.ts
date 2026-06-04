@@ -1,6 +1,6 @@
 import { IsNumber, IsString } from "class-validator";
 
-export class CreateVenteDTO{
+export class CreateVenteDTO {
     @IsString()
     design: string
 
